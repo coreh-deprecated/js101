@@ -1,0 +1,12 @@
+<DOCTYPE html>
+<meta charset="utf-8">
+<title>Exemplo 6</title>
+<button id="btn1">Clique aqui.</button>
+<span id="msg1">A mensagem aparecerá aqui.</span>
+<script>
+	var button = document.getElementById('btn1')
+	button.onclick = function(){
+		var message = document.getElementById('msg1')
+		message.innerHTML = 'Ouch!'
+	}
+</script>
