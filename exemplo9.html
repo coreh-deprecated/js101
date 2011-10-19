@@ -1,0 +1,12 @@
+<DOCTYPE html>
+<meta charset="utf-8">
+<title>Exemplo 9</title>
+<input type="range" id="r" min="0" max="255">
+<input type="text" id="o" disabled>
+<script>
+	var range = document.getElementById('r')
+	range.onchange = function(){
+		var output = document.getElementById('o')
+		output.value = 'Valor do Range: ' + range.value;
+	}
+</script>
