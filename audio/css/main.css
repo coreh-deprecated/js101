@@ -1,0 +1,10 @@
+body {
+	margin: 0;
+	background: url('../images/fundo.png');
+	text-align: center;
+}
+
+img:hover {
+	position: relative;
+	top: -10px;
+}

@@ -1,0 +1,9 @@
+body {
+	background: rgb(60, 60, 60);
+	text-align: center;
+}
+
+canvas, img {
+	background: white;
+	box-shadow: 0 0 5px black;
+}
