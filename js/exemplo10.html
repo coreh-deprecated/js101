@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Exemplo 10</title>
+<input type="range" id="r1" min="0" max="255">
+<input type="range" id="r2" min="0" max="255">
+<input type="range" id="r3" min="0" max="255">
+<input type="text" id="o" disabled>
+<script>
+	// Pega os elementos e coloca nas variáveis
+	var range1 = document.getElementById('r1')
+	var range2 = document.getElementById('r2')
+	var range3 = document.getElementById('r3')
+	var output = document.getElementById('o')
+	
+	// Função que gera cor CSS a partir de Vermelho, Verde e Azul
+	function makeColor(r,g,b) {
+		return 'rgb(' + [r,g,b] + ')';
+	}
+	
+	function update(){
+		
+		console.log('Update foi chamada.')
+		
+		// TO DO: armazenar valores dos ranges em 3 variáveis
+		
+		// TO DO: gerar a cor CSS e armazenar numa variável
+
+		// TO DO: definir a cor de fundo do elemento output
+		
+	}
+	
+	// Uma alteração em qualquer um dos ranges chama a função update()
+	range1.onchange = update
+	range2.onchange = update
+	range3.onchange = update
+	
+</script>
