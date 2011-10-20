@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<title>Local Storage</title>
+<script src="../jquery/jquery-1.6.2.min.js"></script>
+
+<input type="text" id="mensagem">
+
+<button id="salvar">Salvar</button>
+<button id="carregar">Carregar</button>
+
+<script>
+if (window.localStorage) {
+	$(function() {
+		$('#salvar').click(function(){
+			var mensagem = $('#mensagem')[0].value
+			localStorage.setItem('mensagem', mensagem)
+		})
+
+		$('#carregar').click(function(){
+			var mensagem = localStorage.getItem('mensagem')
+			$('#mensagem')[0].value = mensagem
+		})
+	})
+} else {
+	alert('Local Storage não suportado pelo seu browser!')
+}
+</script>
