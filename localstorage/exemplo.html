@@ -1,6 +1,7 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
 <title>Local Storage</title>
-<script src="../jquery/jquery-1.6.2.min.js"></script>
+<!-- Coloque o jQuery aqui -->
 
 <input type="text" id="mensagem">
 
@@ -8,19 +9,32 @@
 <button id="carregar">Carregar</button>
 
 <script>
+// Verifica o suporte ao local storage
 if (window.localStorage) {
+	
+	// Executa código quando a página carregar
 	$(function() {
+		
+		// O usuário clicou em salvar
 		$('#salvar').click(function(){
+			// Pega a mensagem do input
 			var mensagem = $('#mensagem')[0].value
+
+			// Armazena a mensagem no storage
 			localStorage.setItem('mensagem', mensagem)
 		})
 
+		// O usuário clicou em carregar
 		$('#carregar').click(function(){
+			// Lê a mensagem do storage
 			var mensagem = localStorage.getItem('mensagem')
+			
+			// Coloca a mensagem no input
 			$('#mensagem')[0].value = mensagem
 		})
+		
 	})
 } else {
-	alert('Local Storage não suportado pelo seu browser!')
+	alert('Local storage não suportado pelo seu browser!')
 }
 </script>
